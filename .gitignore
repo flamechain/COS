@@ -1,8 +1,13 @@
+# Directories to ignore
 bin/
+old/
+logs/
 .vscode
+
+# Binary files
 *.o
 *.bin
 *.iso
-old/
+
+# Log files
 *.log
-logs/
