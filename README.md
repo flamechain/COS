@@ -24,12 +24,7 @@ Make sure you have the i686 toolchain. Run these commands in this order:
 
 ```bash
 make all
-```
-
-To run do:
-
-```bash
-qemu-system-i386 -kernel cos.kernel
+make run
 ```
 
 ### Windows

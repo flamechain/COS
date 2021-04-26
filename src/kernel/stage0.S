@@ -145,7 +145,7 @@ print:
 1:  ret
 
 welcome_str:
-    .asciz "COS Kernel\n"
+    .asciz "TETRIS TIME\n"
 disk_error_str:
     .asciz "DISK ERROR\n"
 

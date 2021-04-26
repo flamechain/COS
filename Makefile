@@ -28,7 +28,7 @@ BOOTSECT=bootsect.bin
 KERNEL=kernel.bin
 ISO=boot.iso
 
-all: dirs bootsect kernel
+all: clean dirs bootsect kernel iso
 
 %.o: %.c
 	$(CC) -o $@ -c $< $(GFLAGS) $(CCFLAGS)
@@ -50,8 +50,8 @@ iso: dirs bootsect kernel
 	dd if=./bin/$(BOOTSECT) of=boot.iso conv=notrunc bs=512 seek=0 count=1
 	dd if=./bin/$(KERNEL) of=boot.iso conv=notrunc bs=512 seek=1 count=2048
 
-run: boot.iso
-	$(EMU) $^ $(EFLAGS)
+run:
+	$(EMU) -drive format=raw,file=boot.iso $^ $(EFLAGS)
 
 clean:
 	rm -f ./**/**/*.o
