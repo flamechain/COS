@@ -10,7 +10,6 @@ Tested on Linux, Windows
 |-|-|
 | docs/ | Bug fixes, version notes |
 | src/ | All source files (\*.c, \*.h, \*.S, \*.ld) |
-| logs/ | Debug and error logs; ignored by .gitignore because logs may be different for your build |
 
 | src/path | description |
 |-|-|
