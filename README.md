@@ -8,9 +8,13 @@ Tested on Linux, Windows
 
 | path | description |
 |-|-|
-| old/ | Old code that I cant bring my self to delete, ignored by git |
 | docs/ | Bug fixes, version notes |
 | src/ | All project files, should change directory to this folder to properly use \*.sh files |
+
+| src/path | description |
+|-|-|
+| ./ | Linker and general files |
+| kernel/ | Kernel and startup files |
 
 ## Building
 
