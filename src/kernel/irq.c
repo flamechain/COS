@@ -54,11 +54,11 @@ static void irq_remap() {
     outportb(PIC2_DATA, mask2);
 }
 
-static void irq_set_mask(size_t i) {
-    u16 port = i < 8 ? PIC1_DATA : PIC2_DATA;
-    u8 value = inportb(port) | (1 << i);
-    outportb(port, value);
-}
+// static void irq_set_mask(size_t i) {
+//     u16 port = i < 8 ? PIC1_DATA : PIC2_DATA;
+//     u8 value = inportb(port) | (1 << i);
+//     outportb(port, value);
+// }
 
 static void irq_clear_mask(size_t i) {
     u16 port = i < 8 ? PIC1_DATA : PIC2_DATA;

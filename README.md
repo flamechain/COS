@@ -10,12 +10,12 @@ Tested on Linux, Windows
 |-|-|
 | docs/ | Bug fixes, version notes |
 | src/ | All source files (\*.c, \*.h, \*.S, \*.ld) |
-| logs/ | QEMU debugging logs |
+| logs/ | Debug and error logs; ignored by .gitignore because logs may be different for your build |
 
 | src/path | description |
 |-|-|
-| ./ | Linker and general files (linker.ld) |
-| kernel/ | Kernel and startup files (all assembly code is here) |
+| ./ | General files (linker.ld) |
+| kernel/ | Kernel and startup assembly files |
 
 ## Building
 
@@ -28,11 +28,11 @@ make all
 make run
 ```
 
-Alternatively you can run the kernel file directly instead of using the .iso. Not recommended, but you can by specifiying the -kernel directive on qemu.
-
 ### Windows
 
 Follow Linux with Ubuntu (bash terminal) from the Microsoft Store.
+
+If you get a gtk initialization failure, try running `make run` in a native terminal or bash. This requires installing qemu.
 
 ### Mac
 
