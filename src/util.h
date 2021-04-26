@@ -63,6 +63,7 @@ typedef u8 bool;
 
 #define CLI() asm ("cli")
 #define STI() asm ("sti")
+#define HLT() while(true)
 
 static inline u16 inports(u16 port) {
     u16 r;

@@ -1,10 +1,10 @@
 #ifndef TIMER_H
 #define TIMER_H
 
-#include "util.h"
+#include "../../util.h"
 
 // number chosen to be integer divisor of PIC frequency
-#define TIMER_TPS 343
+#define TIMER_TPS 1000
 
 u64 timer_get();
 void timer_init();

@@ -3,7 +3,7 @@
 
 #define PORT 0x3f8 // COM1
 
-#include "util.h"
+#include "../../util.h"
 
 int serial_init();
 int serial_received();

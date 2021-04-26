@@ -40,3 +40,11 @@ void screen_init() {
     outportb(PALETTE_DATA, 0x3F);
     outportb(PALETTE_DATA, 0x3F);
 }
+
+void fill_screen(u8 r, u8 g, u8 b) {
+    screen_clear(COLOR((int)(r / 8), (int)(g / 8), (int)(b / 8)));
+}
+
+void load_screen() {
+    screen_swap();
+}

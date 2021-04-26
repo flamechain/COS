@@ -2,9 +2,12 @@
 
 ## New Features
 
-- New folder structure (again)
-- No grub support ("feature" is a stretch)
-- Keyboard input
+- New folder structure
+- Keyboard driver
+- printf and stdio implementation
+- MacOS support
+
+> Note: Removed grub support
 
 ## Known Issues
 

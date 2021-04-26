@@ -1,7 +1,7 @@
 #ifndef SCREEN_H
 #define SCREEN_H
 
-#include "util.h"
+#include "../../util.h"
 
 #define SCREEN_WIDTH 320
 #define SCREEN_HEIGHT 200
@@ -49,5 +49,8 @@ extern u8 _sback;
 void screen_swap();
 void screen_clear(u8 color);
 void screen_init();
+
+void fill_screen(u8 r, u8 g, u8 b);
+void load_screen();
 
 #endif
