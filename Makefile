@@ -13,14 +13,15 @@ CCFLAGS+=-fno-builtin-function -fno-builtin
 ASFLAGS=
 LDFLAGS=
 EFLAGS=
+# Uncomment if debugging
+EFLAGS+=-serial file:logs/serial.log
 
 BOOTSECT_SRCS=\
 	src/kernel/stage0.S
 
 BOOTSECT_OBJS=$(BOOTSECT_SRCS:.S=.o)
 
-KERNEL_C_SRCS=$(wildcard src/kernel/*.c)
-KERNEL_C_SRCS+=$(wildcard src/*.c)
+KERNEL_C_SRCS=$(wildcard src/**/*.c)
 KERNEL_S_SRCS=$(filter-out $(BOOTSECT_SRCS), $(wildcard src/kernel/*.S))
 KERNEL_OBJS=$(KERNEL_C_SRCS:.c=.o) $(KERNEL_S_SRCS:.S=.o)
 

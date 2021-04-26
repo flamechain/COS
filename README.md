@@ -9,12 +9,13 @@ Tested on Linux, Windows
 | path | description |
 |-|-|
 | docs/ | Bug fixes, version notes |
-| src/ | All project files, should change directory to this folder to properly use \*.sh files |
+| src/ | All source files (\*.c, \*.h, \*.S, \*.ld) |
+| logs/ | QEMU debugging logs |
 
 | src/path | description |
 |-|-|
-| ./ | Linker and general files |
-| kernel/ | Kernel and startup files |
+| ./ | Linker and general files (linker.ld) |
+| kernel/ | Kernel and startup files (all assembly code is here) |
 
 ## Building
 
@@ -26,6 +27,8 @@ Make sure you have the i686 toolchain. Run these commands in this order:
 make all
 make run
 ```
+
+Alternatively you can run the kernel file directly instead of using the .iso. Not recommended, but you can by specifiying the -kernel directive on qemu.
 
 ### Windows
 

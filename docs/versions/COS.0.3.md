@@ -10,4 +10,4 @@
 
 | # | Description | Status | Date |
 |:-:|-|:-:|:-:|
-| 001 | On startup the "Division by Zero" exception is raised | Not Fixed | 4/25/21 |
+| 001 | On startup the "Division by Zero" exception is raised | Fixed | 4/25/21-4/26/21 |
