@@ -8,7 +8,8 @@ Tested on Linux, Windows
 
 | path | description |
 |-|-|
-| docs/ | Version notes and error codes (for troubleshooting); go [here](https://github.com/flamechain/COS/issues) to see bugs |
+| ./ | Project files (README, Makefile) |
+| docs/ | Troubleshooting and general docs for developers |
 | src/ | All source files (\*.c, \*.h, \*.S, \*.ld) |
 
 | src/path | description |

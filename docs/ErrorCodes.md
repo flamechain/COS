@@ -1,11 +1,5 @@
-# Errors
+# Error Codes
 
-This document goes through all the error codes if you happen to stumble upon one.
-
-For all errors try the following if you get stuck:
-
-- Redownload the project
-- Check that you built correctly for your platform
 - If you cant solve the problem submit an issue on [github](https://github.com/flamechain/COS/issues)
 
 | # | Description | Possible Solutions |
