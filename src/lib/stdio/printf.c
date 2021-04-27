@@ -26,13 +26,13 @@ void printf(const char* s) {
         } else if (key == '\r') {
             cursor_x = 0;
         } else {
-            font_str(&s[i], cursor_x, cursor_y, terminal_text_color);
-            cursor_x += 8;
-
-            if (cursor_x > SCREEN_WIDTH) {
+            if (cursor_x >= SCREEN_WIDTH) {
                 cursor_x = 0;
                 cursor_y += 8;
             }
+
+            font_char(key, cursor_x, cursor_y, terminal_text_color);
+            cursor_x += 8;
         }
     }
 }

@@ -32,11 +32,21 @@ void raise_debug(const char* s) {
 void update() {
     char key = scan();
 
-    if (key != '\x00' && key != KEY_LSHIFT && key != KEY_RSHIFT && key != '\n') {
+    if (key != '\x00' && key != '\b' && key != '\n') {
         screen[counter++] = key;
-    } else if (key == KEY_ENTER) {
+    } else if (key == '\b') {
+        if (counter > 0) {
+            screen[--counter] = '\x00';
+
+            if (screen[counter-1] == '\n') {
+                screen[--counter] = '\x00';
+            }
+        }
+    } else if (key == '\n') {
         screen[counter++] = '\n';
         screen[counter++] = '\r';
+    } else if (key != '\x00') {
+        write_serial_string("ERROR 2: main.c: Unknown character given by stdio.scan\n");
     }
 }
 
@@ -60,7 +70,6 @@ void _main(u32 magic) {
     }
 
     u32 last = 0;
-    scan_init();
     set_text_color(COLOR(7, 7, 7));
 
     while (true) {
