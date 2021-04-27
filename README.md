@@ -16,8 +16,10 @@ Tested on Linux, Windows
 | ./ | General files (main.c, util.h, linker.ld) |
 | kernel/ | Kernel and startup assembly files |
 | kernel/include/ | Header files for kernel, added to gcc path so you can include from anywhere |
-| lib/ | Standard library implementations for COS |
-| lib/include | Header files for libs, added to gcc path so you can include from anywhere |
+
+| src/lib | description |
+| include/ | Header files for libs, added to gcc path so you can include from anywhere |
+| stdio/ | Implementation for stdio (not full) |
 
 ## Building
 
